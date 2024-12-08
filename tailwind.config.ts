@@ -12,7 +12,7 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
-        primary: "#303336",
+        primary: "#44474b",
         light: "#8c94a0",
       },
     },
