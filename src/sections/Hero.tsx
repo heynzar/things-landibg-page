@@ -6,7 +6,7 @@ import product2 from "@/assets/hero-product-2.jpg";
 
 export default function Hero() {
   return (
-    <section className="my-14 flex flex-col items-center overflow-x-hidden border-b border-light/20">
+    <section className="mt-14 flex flex-col items-center overflow-x-hidden border-b border-light/20">
       <div>
         <Image src={hero} alt="Big Logo" className="w-[200px] sm:w-[240px]" />
       </div>
