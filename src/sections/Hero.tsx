@@ -1,10 +1,12 @@
 import Image from "next/image";
 import hero from "@/assets/hero.png";
 import play from "@/assets/play.svg";
+import product from "@/assets/hero-product.jpg";
+import product2 from "@/assets/hero-product-2.jpg";
 
 export default function Hero() {
   return (
-    <section className="my-14 flex flex-col items-center">
+    <section className="my-14 flex flex-col items-center overflow-x-hidden border-b border-light/20">
       <div>
         <Image src={hero} alt="Big Logo" className="w-[200px] sm:w-[240px]" />
       </div>
@@ -19,6 +21,11 @@ export default function Hero() {
         <Image alt="play" src={play} className="size-8" />
         Watch Introduction Video
       </button>
+
+      <div className="flex lg:translate-x-40 ">
+        <Image src={product} className="" alt="product showcase" />
+        <Image src={product2} className="" alt="product showcase" />
+      </div>
     </section>
   );
 }
