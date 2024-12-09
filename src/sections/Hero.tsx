@@ -22,7 +22,7 @@ export default function Hero() {
         Watch Introduction Video
       </button>
 
-      <div className="flex lg:translate-x-40 ">
+      <div className="flex lg:translate-x-30 max-w-screen-xl ">
         <Image src={product} className="lg:h-[70%]" alt="product showcase" />
         <Image src={product2} className="" alt="product showcase" />
       </div>

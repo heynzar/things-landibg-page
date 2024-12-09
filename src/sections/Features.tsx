@@ -7,7 +7,7 @@ import features from "@/assets/features-product.png";
 export default function Features() {
   return (
     <section className="pt-28 mb-12 px-6 bg-[#fbfcfe] flex flex-col items-center overflow-x-hidden border-b border-light/20">
-      <h1 className="flex gap-1 items-center font-bold text-4xl">
+      <h1 className="flex gap-1 items-center font-bold text-2xl sm:text-4xl">
         <Image src={lights} alt="lights icon" className="size-20 p-2" />
         <span>Simply Powerful</span>
       </h1>

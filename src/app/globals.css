@@ -13,10 +13,6 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-.downloadFooter {
-  background-color: #ffffff;
-  background-position: 50% 100%;
-  background-repeat: no-repeat;
-  background-size: 800px 240px;
-  padding: 81px 0px 240px;
+.ff {
+  flex: 1 0 22%;
 }

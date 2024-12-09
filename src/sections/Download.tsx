@@ -46,28 +46,32 @@ const downloaddata = [
 export default function Download() {
   return (
     <section className="pt-28 mb-12 px-6 bg-[#fbfcfe] flex flex-col items-center overflow-x-hidden border-b border-light/20">
-      <h1 className="flex gap-1 items-center font-bold text-4xl">
+      <h1 className="flex gap-1 items-center font-bold text-2xl sm:text-4xl">
         <Image src={fancysection} alt="lights icon" className="size-20 p-2" />
         <span>Get Things, Get Done</span>
       </h1>
 
-      <p className="text-center text-lg sm:text-xl text-primary px-6 mt-2 max-w-[500px]">
+      <p className="text-center text-lg sm:text-xl text-primary px-2 sm:px-6 mt-2 max-w-[500px]">
         Whatever it is you want to accomplish in life, Things can help you get
         there. Install the app today and see what you can do!
       </p>
 
-      <div className="flex gap-5 flex-wrap justify-center items-center mt-10">
+      <div className="flex gap-5 flex-wrap justify-center items-center mt-10 flex-1">
         {downloaddata.map(({ title, desc, image, span, downloadbtn }) => {
           return (
             <div
               key={title}
-              className="flex flex-col gap-2 items-center justify-center bg-[#f2f5f7] p-5 max-w-56 rounded-2xl"
+              className="flex flex-col gap-2 items-center justify-center bg-[#f2f5f7] p-5 sm:flex-[1_0_45%] lg:flex-[1_1_0%] lg:w-[222px] flex-grow rounded-2xl"
             >
-              <Image
-                src={image}
-                alt="iphone icon"
-                className="hover:scale-105 cursor-pointer transition-transform"
-              />
+              <a href="" className="w-full flex justify-center group">
+                <Image
+                  width={100}
+                  height={100}
+                  src={image}
+                  alt="iphone icon"
+                  className="group-hover:scale-105 cursor-pointer transition-transform"
+                />
+              </a>
               <h3 className="text-center text-xl font-semibold">{title}</h3>
               <p
                 className={`${
@@ -80,20 +84,22 @@ export default function Download() {
                   view in your currency
                 </a>
               </p>
-              {downloadbtn.map((btn, index) => (
-                <Image
-                  key={index}
-                  src={btn}
-                  alt="appstore download"
-                  className="opacity-80 hover:opacity-100 transition-opacity cursor-pointer"
-                />
-              ))}
+              <div className="flex flex-col gap-[5px]">
+                {downloadbtn.map((btn, index) => (
+                  <Image
+                    key={index}
+                    src={btn}
+                    alt="appstore download"
+                    className="opacity-80 hover:opacity-100 transition-opacity cursor-pointer"
+                  />
+                ))}
+              </div>
             </div>
           );
         })}
       </div>
 
-      <Image src={downloadFooter} alt="app logo" className="downloadFooter" />
+      <Image src={downloadFooter} alt="app logo" className="md:h-60 w-auto" />
     </section>
   );
 }
