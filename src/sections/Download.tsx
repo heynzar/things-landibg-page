@@ -2,6 +2,8 @@ import Image from "next/image";
 import fancysection from "@/assets/fancysection-icon.png";
 import appstore from "@/assets/appstore-ios-black.svg";
 
+import downloadFooter from "@/assets/downloadFooter.jpeg";
+
 import iphone from "@/assets/productcard-iphone-watch.svg";
 import ipad from "@/assets/productcard-ipad.svg";
 import mac from "@/assets/productcard-mac.svg";
@@ -90,6 +92,8 @@ export default function Download() {
           );
         })}
       </div>
+
+      <Image src={downloadFooter} alt="app logo" className="downloadFooter" />
     </section>
   );
 }
