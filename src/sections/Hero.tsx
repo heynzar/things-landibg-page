@@ -23,7 +23,7 @@ export default function Hero() {
       </button>
 
       <div className="flex lg:translate-x-40 ">
-        <Image src={product} className="" alt="product showcase" />
+        <Image src={product} className="lg:h-[70%]" alt="product showcase" />
         <Image src={product2} className="" alt="product showcase" />
       </div>
     </section>
