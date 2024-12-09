@@ -1,7 +1,45 @@
 import Image from "next/image";
 import fancysection from "@/assets/fancysection-icon.png";
-import iphone from "@/assets/productcard-iphone-watch.svg";
 import appstore from "@/assets/appstore-ios-black.svg";
+
+import iphone from "@/assets/productcard-iphone-watch.svg";
+import ipad from "@/assets/productcard-ipad.svg";
+import mac from "@/assets/productcard-mac.svg";
+import vision from "@/assets/productcard-vision.svg";
+
+import appstoreMac from "@/assets/appstore-mac-black.svg";
+import appstoreTrial from "@/assets/appstore-trial.svg";
+
+const downloaddata = [
+  {
+    image: mac,
+    title: "Mac",
+    desc: "macOS 10.15 or later",
+    span: "$49.99 (US)",
+    downloadbtn: [appstoreTrial, appstoreMac],
+  },
+  {
+    image: iphone,
+    title: "iPhone & Watch",
+    desc: "iOS 15 or later",
+    span: "$9.99 (US)",
+    downloadbtn: [appstore],
+  },
+  {
+    image: ipad,
+    title: "iPad",
+    desc: "iPadOS 15 or later",
+    span: "$19.99 (US)",
+    downloadbtn: [appstore],
+  },
+  {
+    image: vision,
+    title: "Vision Pro",
+    desc: "visionOS 1.0 or later",
+    span: "$29.99 (US)",
+    downloadbtn: [appstore],
+  },
+];
 
 export default function Download() {
   return (
@@ -16,27 +54,41 @@ export default function Download() {
         there. Install the app today and see what you can do!
       </p>
 
-      <div className="flex mt-10">
-        <div className="flex flex-col gap-2 items-center justify-center bg-[#f2f5f7] p-5 max-w-56 rounded-2xl">
-          <Image
-            src={iphone}
-            alt="iphone icon"
-            className="hover:scale-105 cursor-pointer transition-transform"
-          />
-          <h3 className="text-center text-xl font-semibold">iPhone & Watch</h3>
-          <p className="text-center text-light text-[0.95rem]">
-            iOS 15 or later $9.99 (US) <br />
-            <a href="" className="underline">
-              view in your currency
-            </a>
-          </p>
-
-          <Image
-            src={appstore}
-            alt="appstore download"
-            className="mt-10 opacity-80 hover:opacity-100 transition-opacity cursor-pointer"
-          />
-        </div>
+      <div className="flex gap-5 flex-wrap justify-center items-center mt-10">
+        {downloaddata.map(({ title, desc, image, span, downloadbtn }) => {
+          return (
+            <div
+              key={title}
+              className="flex flex-col gap-2 items-center justify-center bg-[#f2f5f7] p-5 max-w-56 rounded-2xl"
+            >
+              <Image
+                src={image}
+                alt="iphone icon"
+                className="hover:scale-105 cursor-pointer transition-transform"
+              />
+              <h3 className="text-center text-xl font-semibold">{title}</h3>
+              <p
+                className={`${
+                  downloadbtn.length > 1 ? "mb-2" : "mb-14"
+                } text-center  text-light text-[0.95rem]`}
+              >
+                <span>{desc}</span> <br /> <span>{span}</span>
+                <br />
+                <a href="" className="underline">
+                  view in your currency
+                </a>
+              </p>
+              {downloadbtn.map((btn, index) => (
+                <Image
+                  key={index}
+                  src={btn}
+                  alt="appstore download"
+                  className="opacity-80 hover:opacity-100 transition-opacity cursor-pointer"
+                />
+              ))}
+            </div>
+          );
+        })}
       </div>
     </section>
   );
