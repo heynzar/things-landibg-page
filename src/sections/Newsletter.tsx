@@ -5,7 +5,7 @@ import newsletter from "@/assets/newsletter.png";
 
 export default function Newsletter() {
   return (
-    <section className="py-28 bg-[#f2f5f7] flex flex-col items-center overflow-x-hidden border-b border-light/20">
+    <section className="py-28 px-6 bg-[#f2f5f7] flex flex-col items-center overflow-x-hidden">
       <h1 className="flex gap-1 items-center font-bold text-2xl sm:text-4xl">
         <Image src={newsletter} alt="lights icon" className="size-20 p-2" />
         <span>Things Newsletter</span>
@@ -22,7 +22,7 @@ export default function Newsletter() {
       </label>
       <input
         placeholder="me@example.com"
-        className="px-2 outline-[#4f91fb] w-full border border-light max-w-[500px] bg-white h-9 rounded-lg mt-10 mb-5"
+        className="px-2 outline-[#4f91fb] w-full border border-light/40 max-w-[500px] bg-white h-9 rounded-lg mt-10 mb-5"
         type="email"
         name="mail"
         id="mail"
