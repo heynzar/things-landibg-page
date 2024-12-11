@@ -7,7 +7,7 @@ export const whatpeoplearesayingData = [
     avatar,
     desc: "— Things is life changing.",
     tags: ["@BryanBanksPhD ", "@culturedcode "],
-    link: "JWellsTax/status/1861099611949006860",
+    link: "culturedcode/status/1835735300607295920",
   },
 
   {
@@ -16,7 +16,7 @@ export const whatpeoplearesayingData = [
     avatar,
     desc: "— Things is life changing.",
     tags: ["@BryanBanksPhD ", "@culturedcode "],
-    link: "JWellsTax/status/1861099611949006860",
+    link: "culturedcode/status/1835735300607295920",
   },
 
   {
@@ -25,7 +25,7 @@ export const whatpeoplearesayingData = [
     avatar,
     desc: "— Things is life changing.",
     tags: ["@BryanBanksPhD ", "@culturedcode "],
-    link: "JWellsTax/status/1861099611949006860",
+    link: "culturedcode/status/1835735300607295920",
   },
 
   {
@@ -34,7 +34,7 @@ export const whatpeoplearesayingData = [
     avatar,
     desc: "— Things is life changing.",
     tags: ["@BryanBanksPhD ", "@culturedcode "],
-    link: "JWellsTax/status/1861099611949006860",
+    link: "culturedcode/status/1835735300607295920",
   },
 
   {
@@ -43,7 +43,7 @@ export const whatpeoplearesayingData = [
     avatar,
     desc: "— Things is life changing.",
     tags: ["@BryanBanksPhD ", "@culturedcode "],
-    link: "JWellsTax/status/1861099611949006860",
+    link: "culturedcode/status/1835735300607295920",
   },
 
   {
@@ -52,6 +52,6 @@ export const whatpeoplearesayingData = [
     avatar,
     desc: "— Things is life changing.",
     tags: ["@BryanBanksPhD ", "@culturedcode "],
-    link: "JWellsTax/status/1861099611949006860",
+    link: "culturedcode/status/1835735300607295920",
   },
 ];
