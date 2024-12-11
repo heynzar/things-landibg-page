@@ -1,7 +1,7 @@
 import { ChevronRight, Instagram } from "lucide-react";
 import Image, { StaticImageData } from "next/image";
 import whatpeoplearesaying from "@/assets/whatpeoplearesaying.png";
-import { whatpeoplearesayingData } from "@/utils/whatpeoplearesayingData";
+import { whatpeoplearesayingData } from "@/utils/appData";
 
 export default function PeopleSay() {
   return (
