@@ -2,6 +2,7 @@ import Download from "@/sections/Download";
 import Features from "@/sections/Features";
 import Header from "@/sections/Header";
 import Hero from "@/sections/Hero";
+import PeopleSay from "@/sections/PeopleSay";
 
 export default function Home() {
   return (
@@ -10,6 +11,7 @@ export default function Home() {
       <Hero />
       <Features />
       <Download />
+      <PeopleSay />
     </>
   );
 }
