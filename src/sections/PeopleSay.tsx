@@ -1,9 +1,21 @@
+"use client";
+import { useState } from "react";
+
 import { ChevronRight, Instagram } from "lucide-react";
 import Image, { StaticImageData } from "next/image";
 import whatpeoplearesaying from "@/assets/whatpeoplearesaying.png";
 import { whatpeoplearesayingData } from "@/utils/appData";
 
 export default function PeopleSay() {
+  const [x, setX] = useState(0);
+  const count = 6;
+
+  function showNext() {
+    x + count === whatpeoplearesayingData.length ? setX(0) : setX(x + count);
+  }
+  function showPrev() {
+    x === 0 ? setX(whatpeoplearesayingData.length - count) : setX(x - count);
+  }
   return (
     <section className="py-28 px-6 bg-[#f2f5f7] flex flex-col items-center overflow-x-hidden border-b border-light/20">
       <h1 className="flex gap-1 items-center font-bold text-2xl sm:text-4xl">
@@ -37,10 +49,13 @@ export default function PeopleSay() {
 
       <div className="flex justify-center gap-4 items-center">
         <div>
-          <ChevronRight className="size-14 rotate-180 cursor-pointer hover:text-blue-400 transition-colors" />
+          <ChevronRight
+            onClick={showPrev}
+            className="size-14 rotate-180 cursor-pointer hover:text-blue-400 transition-colors"
+          />
         </div>
         <div className="flex justify-center gap-4 items-center flex-wrap my-5 max-w-3xl">
-          {whatpeoplearesayingData.map(
+          {whatpeoplearesayingData.slice(x, x + count).map(
             (
               {
                 name,
@@ -61,11 +76,12 @@ export default function PeopleSay() {
             ) => (
               <div
                 key={index}
-                className=" bg-white shadow-lg p-3 rounded-xl sm:flex-[1_0_45%] flex-grow max-w-sm"
+                className="transition-all duration-500 bg-white shadow-lg p-3 rounded-xl sm:flex-[1_0_45%] flex-grow max-w-sm"
               >
                 <p className="text-[15px]">
-                  {tags.map((tag) => (
+                  {tags.map((tag, index) => (
                     <a
+                      key={index}
                       href={`https://x.com/${tag}`}
                       className="hover:underline transition text-light"
                     >
@@ -95,7 +111,10 @@ export default function PeopleSay() {
           )}
         </div>
         <div>
-          <ChevronRight className="size-14 cursor-pointer hover:text-blue-400 transition-colors" />
+          <ChevronRight
+            onClick={showNext}
+            className="size-14 cursor-pointer hover:text-blue-400 transition-colors"
+          />
         </div>
       </div>
     </section>
