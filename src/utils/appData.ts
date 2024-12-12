@@ -291,6 +291,21 @@ export const whatpeoplearesayingData = [
   },
 ];
 
+export const testimonials = [
+  {
+    icon: "SVG",
+    desc: "Things never feels messy or overbearing, no matter the length of your task list. Lovely, unfolding animations keep your place, and there’s a super-fast search tool if you get lost. It’s the rare to-do list app that doesn’t try to force you into a particular way of thinking. […] It’s more like a clean, crisp piece of paper, ready whenever you need it.",
+  },
+  {
+    icon: "SVG",
+    desc: "A joy to use and beautiful to look at, Things 3 has been completely re-imagined to improve efficiency. Its thoughtful design and powerful features help you get organized and make the most out of every day. [...] Things 3 sets the standard for how apps should be designed and developed to be their best on every device.",
+  },
+  {
+    icon: "SVG",
+    desc: "Things 3 offers the best combination of design and functionality of any app we tested, with nearly all the features of other power user applications and a delightful interface that never gets in the way of your work.”",
+  },
+];
+
 export const footerLinks = [
   {
     name: "Products",
