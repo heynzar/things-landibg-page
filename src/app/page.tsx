@@ -5,6 +5,7 @@ import Header from "@/sections/Header";
 import Hero from "@/sections/Hero";
 import Newsletter from "@/sections/Newsletter";
 import PeopleSay from "@/sections/PeopleSay";
+import Testimonials from "@/sections/Testimonials";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <Features />
       <Download />
       <PeopleSay />
+      <Testimonials />
       <Newsletter />
       <Footer />
     </>
